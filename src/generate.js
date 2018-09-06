@@ -1,10 +1,8 @@
 import assert from 'assert';
-import page from './generators/page';
 import rnpage from './generators/rnpage';
-import component from './generators/component';
 
 const generators = {
-  page,component,rnpage
+  rnpage
 };
 
 export default function(opts = {}) {

@@ -1,8 +1,7 @@
 {
-  "name": "oni-cli",
-  "version": "2.0.3",
-  "description":
-    "CLI for dva-umi. create by [xiaohuoni](https://github.com/xiaohuoni). last update:2014/3/14 17:53",
+  "name": "whale-oss-cli",
+  "version": "0.0.2",
+  "description": "CLI for dva-native. create by [xiaohuoni](https://github.com/xiaohuoni).",
   "author": "xiaohuoni",
   "main": "index.js",
   "license": "MIT",
@@ -10,12 +9,18 @@
     "lib": "lib"
   },
   "bin": {
-    "oni": "./bin/oni.js"
+    "whale-oss": "./bin/whale-oss.js"
   },
   "scripts": {
-    "build": "rm -rf lib && babel src --out-dir lib"
+    "build": "rm -rf lib && babel src --out-dir lib",
+    "open": "npm run build && npm publish"
   },
-  "keywords": ["oni", "umi", "dva", "mock", "xiaohuoni"],
+  "keywords": [
+    "oni",
+    "react-native",
+    "dva",
+    "xiaohuoni"
+  ],
   "dependencies": {
     "assert": "^1.4.1",
     "babel-runtime": "^6.9.2",
@@ -25,8 +30,10 @@
     "fs": "0.0.1-security",
     "fs-extra": "^6.0.0",
     "path": "^0.12.7",
+    "through2": "^2.0.3",
     "update-notifier": "^2.5.0",
     "uppercamelcase": "^3.0.0",
+    "vinyl-fs": "^3.0.3",
     "yargs-parser": "^10.0.0"
   },
   "devDependencies": {
@@ -38,12 +45,25 @@
     "babel-preset-stage-0": "~6.5.0"
   },
   "babel": {
-    "presets": ["es2015", "react", "stage-0"],
-    "plugins": ["add-module-exports", "transform-runtime"]
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ],
+    "plugins": [
+      "add-module-exports",
+      "transform-runtime"
+    ]
   },
-  "files": ["lib", "template", "template-n","bin"],
+  "files": [
+    "lib",
+    "template-n",
+    "bin",
+    "app",
+    "package"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiaohuoni/oni-cli"
+    "url": "https://github.com/react-native-examples/whale-oss-cli"
   }
 }

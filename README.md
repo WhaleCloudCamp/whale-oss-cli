@@ -1,100 +1,52 @@
-this readme copy and edit for dva-cli
-this code copy and edit for umi
-# oni-cli
-[![NPM version](https://img.shields.io/npm/v/oni-cli.svg?style=flat)](https://npmjs.org/package/oni-cli)
-[![NPM downloads](http://img.shields.io/npm/dm/oni-cli.svg?style=flat)](https://npmjs.org/package/oni-cli)
+# whale-oss-cli
+[![NPM version](https://img.shields.io/npm/v/whale-oss-cli.svg?style=flat)](https://npmjs.org/package/whale-oss-cli)
+[![NPM downloads](http://img.shields.io/npm/dm/whale-oss-cli.svg?style=flat)](https://npmjs.org/package/whale-oss-cli)
 
-CLI for [dva](https://github.com/dvajs/dva) [umi](https://github.com/umijs/umi).
+CLI for [dva-native](https://github.com/react-native-examples/react-native-dva-starter) 
 
-## update
-### 2018.05.08
-- 1.use ejs
-- 2.change the app-structure like umi
-- 3.crate app (or mobile app) for Git clone
-- 4.the template managed to Git [app](https://github.com/xiaohuoni/dva-umi) [mobile](https://github.com/xiaohuoni/dva-umi-mobile)
-### 2018.03.24 
-- 1.update umi1.1 
-- 2.add Nested Route
 ## Getting Started
 
 Install, create and start.
 
 ```bash
 # Install
-$ npm install oni-cli -g
+$ npm install whale-oss-cli -g
+or
+$ yarn global add whale-oss-cli
 
 # Create app
-$ oni new myapp
+$ whale-oss create Myapp
 
 # Start app
-$ cd myapp
-$ npm i 
-$ npm start
+$ cd Myapp
+$ npm run ios
 ```
 
 ## Commands
 
-We have 2 commands: `new`  and `generate`(alias `g`).
+We have 2 commands: `create`  and `generate`(alias `g`).
 
-### oni new appName
+### whale-oss new appName
 
 Create app with new directory.
 
 #### Usage Examples
 
 ```bash
-$ oni new myapp
+$ whale-oss create myapp
 
-$ oni new myapp --mobile (or --web) ( create web app )
 ```
 
 
-### oni generate <type> <name> <?pagename> (short-cut alias: "g")
+### whale-oss g <type> <name> <?pagename> (short-cut alias: "g")
 
 Generate page and component.
 
 #### Usage Examples
 
 ```bash
-$ oni g page home
-#generate component '/src/pages/home/components/Table.js'
-$ oni g component Table home  
-#generate component '/src/components/Table.js'
-$ oni g component Table 
+$ whale-oss g rgpage home
 ```
-
-## Generated File Tree
-
-```bash
-.
-├── mock                   # mock data
-    ├── user.js            # the mock data test
-├── public                 # index.html
-├── src                    # Source directory
-    ├── assets             # Store images, icons, ...
-    ├── components         # UI components
-    ├── layouts            # layouts
-    ├── models             # Dva global models    
-    ├── pages              # all pages (auto create Route)
-    ├── plugins            # umi plugins
-    ├── services           # Used for communicate with server
-    └── utils              # Utils
-        ├── request.js     # A util wrapped dva/fetch
-        └── config.js      # global config (name,api...)
-    
-    ├── global.less        # global less
-├── .editorconfig          #
-├── .eslintrc              # Eslint config
-├── .umirc.js              # umi
-├── .umirc.mock.js         # umi mock
-├── .webpackrc.js          # webpackrc extend(lick alias prexy)
-├── .gitignore             #
-└── package.json           #
-```
-
-## Configuration
-
-oni-cli use [umi](https://github.com/umijs/umi) for build and server
 
 ## License
 
