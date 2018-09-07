@@ -3,6 +3,7 @@ import { Text, View } from 'react-native'
 import { connect } from 'react-redux'
 import { Button } from './components/Button'
 
+
 function App({<%= oni.fileName %>,dispatch}) {
     const { text } = <%= oni.fileName %>;
     const changetext=()=>dispatch({type:"<%= oni.fileName %>/fetch"});

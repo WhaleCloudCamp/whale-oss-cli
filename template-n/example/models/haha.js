@@ -1,21 +1,17 @@
-import {
-  query
-} from "../services/<%= oni.fileName %>"
+import { query } from "../services/<%= oni.fileName %>";
 
 export default {
-  namespace: '<%= oni.fileName %>',
+  namespace: "<%= oni.fileName %>",
   state: {
-    text: 'page work',
+    text: "page work",
     list: []
   },
   effects: {
-    * fetch({payload}, {
-      put
-    }) {
-      const data = yield query(payload)
-      console.log(data)
+    *fetch({ payload }, { put }) {
+      const data = yield query(payload);
+      console.log(data);
       yield put({
-        type: 'save',
+        type: "save",
         payload: {
           text: JSON.stringify(data)
         }
@@ -24,9 +20,10 @@ export default {
   },
   reducers: {
     save(state, action) {
-      return { ...state,
+      return {
+        ...state,
         ...action.payload
       };
-    },
-  },
+    }
+  }
 };
